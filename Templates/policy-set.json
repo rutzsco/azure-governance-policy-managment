@@ -35,12 +35,16 @@
         "policyDefinitions": [
           {
             "policyDefinitionId": "[concat('/providers/Microsoft.Authorization/policyDefinitions/', '6d555dd1-86f2-4f1c-8ed7-5abae7c6cbab')]",
-            "policyDefinitionReferenceId": "App Service",
+            "policyDefinitionReferenceId": "Governance_AppService",
             "parameters": {
               "effect": {
                 "value": "[[parameters('effect')]"
               }
             }
+          },
+          {
+            "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/f9d614c5-c173-4d56-95a7-b4437057d193",
+            "policyDefinitionReferenceId": "Governance_AppService"
           }
         ]
       }
