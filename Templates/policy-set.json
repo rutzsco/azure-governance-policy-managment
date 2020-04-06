@@ -3,7 +3,7 @@
   "contentVersion": "1.0.0.0",
   "variables": {
     "policySetName": "app-service-standard-psd",
-    "policySetDisplayName": "Enforce standard app service configuration options.",
+    "policySetDisplayName": "Governance - App service: Enforce standard app service configuration options.",
     "policySetDescription": "This policy initiative enforces standard app service configuration options."
   },
   "resources": [
