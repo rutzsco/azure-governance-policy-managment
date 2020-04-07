@@ -10,14 +10,7 @@
     {
       "type": "Microsoft.Authorization/policySetDefinitions",
       "apiVersion": "2019-09-01",
-      "name": "[variables('policySetName')]",
-      "comments" : 
-         "CCOE_AppService_001 - Function App should only be accessible over HTTPS
-          CCOE_AppService_002 - Web Application should only be accessible over HTTPS
-          CCOE_AppService_003 - API App should only be accessible over HTTPS
-          CCOE_AppService_004 - Ensure that 'HTTP Version' is the latest, if used to run the API app
-          CCOE_AppService_005 - Ensure that 'HTTP Version' is the latest, if used to run the Web app
-          CCOE_AppService_006 - Ensure that 'HTTP Version' is the latest, if used to run the Function app",          
+      "name": "[variables('policySetName')]",        
       "properties": {
         "displayName": "[variables('policySetDisplayName')]",
         "description": "[variables('policySetDescription')]",
