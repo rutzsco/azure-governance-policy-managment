@@ -11,6 +11,13 @@
       "type": "Microsoft.Authorization/policySetDefinitions",
       "apiVersion": "2019-09-01",
       "name": "[variables('policySetName')]",
+      "comments" : 
+         "CCOE_AppService_001 - Function App should only be accessible over HTTPS
+          CCOE_AppService_002 - Web Application should only be accessible over HTTPS
+          CCOE_AppService_003 - API App should only be accessible over HTTPS
+          CCOE_AppService_004 - Ensure that 'HTTP Version' is the latest, if used to run the API app
+          CCOE_AppService_005 - Ensure that 'HTTP Version' is the latest, if used to run the Web app
+          CCOE_AppService_006 - Ensure that 'HTTP Version' is the latest, if used to run the Function app",          
       "properties": {
         "displayName": "[variables('policySetDisplayName')]",
         "description": "[variables('policySetDescription')]",
@@ -35,33 +42,27 @@
         "policyDefinitions": [
           {
             "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/6d555dd1-86f2-4f1c-8ed7-5abae7c6cbab",
-            "policyDefinitionReferenceId": "CCOE_AppService_001",
-            "comments": "Function App should only be accessible over HTTPS"
+            "policyDefinitionReferenceId": "CCOE_AppService_001"
           },
           {
             "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/a4af4a39-4135-47fb-b175-47fbdf85311d",
-            "policyDefinitionReferenceId": "CCOE_AppService_002",
-            "comments": "Web Application should only be accessible over HTTPS"
+            "policyDefinitionReferenceId": "CCOE_AppService_002"
           },
           {
             "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/b7ddfbdc-1260-477d-91fd-98bd9be789a6",
-            "policyDefinitionReferenceId": "CCOE_AppService_003",
-            "comments": "API App should only be accessible over HTTPS"
+            "policyDefinitionReferenceId": "CCOE_AppService_003"
           },
           {
             "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/8c122334-9d20-4eb8-89ea-ac9a705b74ae",
-            "policyDefinitionReferenceId": "CCOE_AppService_004",
-            "comments": "Ensure that 'HTTP Version' is the latest, if used to run the Web app"
+            "policyDefinitionReferenceId": "CCOE_AppService_004"
           },
           {
             "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/991310cd-e9f3-47bc-b7b6-f57b557d07db",
-            "policyDefinitionReferenceId": "CCOE_AppService_005",
-            "comments": "Ensure that 'HTTP Version' is the latest, if used to run the Web app"
+            "policyDefinitionReferenceId": "CCOE_AppService_005"
           },
           {
             "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/e2c1c086-2d84-4019-bff3-c44ccd95113c",
-            "policyDefinitionReferenceId": "CCOE_AppService_006",
-            "comments": "Ensure that 'HTTP Version' is the latest, if used to run the Function app"
+            "policyDefinitionReferenceId": "CCOE_AppService_006"
           }
         ]
       }
