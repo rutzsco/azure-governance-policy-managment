@@ -1,0 +1,44 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2018-05-01/subscriptionDeploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "variables": {
+    "policySetName": "key-vault-standard-psd",
+    "policySetDisplayName": "Governance - Key Vault: Enforce standard key vault configuration options.",
+    "policySetDescription": "This policy initiative enforces standard key vault configuration options."
+  },
+  "resources": [
+    {
+      "type": "Microsoft.Authorization/policySetDefinitions",
+      "apiVersion": "2019-09-01",
+      "name": "[variables('policySetName')]",        
+      "properties": {
+        "displayName": "[variables('policySetDisplayName')]",
+        "description": "[variables('policySetDescription')]",
+        "policyType": "Custom",
+        "metadata": {
+          "category": "Key Vault - CCOE"
+        },
+        "parameters": {
+          "effect": {
+            "type": "String",
+            "metadata": {
+              "displayName": "Effect",
+              "description": "Enable or disable the execution of the policy"
+            },
+            "allowedValues": [
+              "Audit",
+              "Disabled"
+            ],
+            "defaultValue": "Audit"
+          }
+        },
+        "policyDefinitions": [
+          {
+            "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/ed7c8c13-51e7-49d1-8a43-8490431a0da2",
+            "policyDefinitionReferenceId": "CCOE_KeyVault_001"
+          }
+        ]
+      }
+    }
+  ]
+}
